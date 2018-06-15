@@ -1,0 +1,113 @@
+/*tables related to authentication and users management */
+
+Table users
+id
+name
+email
+password
+rememberToken
+
+Table password_resets
+email
+token
+created_at
+
+$tableNames = config('permission.table_names');
+$foreignKeys = config('permission.foreign_keys');
+
+Table permissions
+id
+name
+guard_name
+
+Table roles
+id
+name
+guard_name
+
+
+Table model_has_permissions
+permission_id
+model
+id
+permissions
+
+Table model_has_roles
+role_id
+model
+roles
+
+Table role_has_permissions
+permission_id
+role_id
+id
+
+
+Table house
+id
+floor
+housenumber
+bedrooms
+washrooms
+rent
+deposit
+occupation_status
+mainteinance_status
+
+
+Table house
+id
+floor
+housenumber
+bedrooms
+washrooms
+rent
+deposit
+occupationstatus
+mainteinancestatus
+index(['housenumber', 'occupationstatus'])
+
+
+Table occupantdetails
+id
+floor
+housenumber
+names
+noofoccupants
+index(['housenumber', 'names'])
+
+Table tenant
+id
+housenumber
+names
+idnumber
+mobilenumber
+occupation
+relationship
+nextofkin
+kinmobilenumber
+dateofmovingin
+dateofmovingout
+index(['housenumber','mobilenumber'])
+
+Table rent
+id
+housenumber
+paidby
+idnumber
+payment_type
+date
+amountdue
+amontpaid
+balance
+index(['housenumber','balance'])
+
+Table bill
+id
+housenumber
+billtype
+paidby
+amountdue
+amontpaid
+'balance
+index(['housenumber','billtype','balance'])
