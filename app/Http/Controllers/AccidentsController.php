@@ -45,6 +45,8 @@ class AccidentsController extends Controller
     public function addaccident()
     {
         $incidentid= intval( "0" . rand(1,9) . rand(0,9) . rand(0,9) . rand(0,9) . rand(0,9) );
+
+        
         $aeroplane = Input::get('aeroplane');
         $incidentname= Input::get('incidentname');
         $location =  Input::get('location');

@@ -28,8 +28,10 @@
                 </div>
             
               <div class="col-md-4 ">
-                                    
-                             <a href="{{route('addplaneform')}}"><img class="circle" src="{{URL::asset('images/add-new.png')}}"/></a><p> New Aeroplane</p>        
+              @if (Auth::user()->hasPermissionTo('Administer roles & permissions'))        
+                             <a href="{{route('addplaneform')}}"><img class="circle" src="{{URL::asset('images/add-new.png')}}"/></a><p> New Aeroplane
+                             </p>        
+              @endif
               </div>
                
                

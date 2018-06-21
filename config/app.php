@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
          Spatie\Permission\PermissionServiceProvider::class,
          Collective\Html\HtmlServiceProvider::class,
+         ConsoleTVs\Charts\ChartsServiceProvider::class,
 
         /*
          * Package Service Providers...

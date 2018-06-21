@@ -33,9 +33,10 @@
                 </div>
             
               <div class="col-md-4 ">
-                                    
+                   @if (Auth::user()->hasPermissionTo('Administer roles & permissions'))
+
                              <a href="{{route('reports.index')}}"><img class="circle" src="{{URL::asset('images/reports.png')}}"/></a><p>Reports</p> 
-                       
+                      @endif
               </div>
                
                

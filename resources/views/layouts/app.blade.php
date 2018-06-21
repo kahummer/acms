@@ -24,9 +24,31 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
+    <script>
+        function startTime(){
+          
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+    document.getElementById('txt').innerHTML = h + ":" + m + ":" +s
+          var t = setTimeout(startTime, 1000);
+      }
+      function checkTime(i){
+          if(i<10){
+              i = "0" + i;
+          }
+          return i;
+      }
+
+    </script>
     <script src="https://use.fontawesome.com/9712be8772.js"></script>
 </head>
-<body>
+<body onload="startTime()">
+    
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -55,8 +77,11 @@
 
                         @if (!Auth::guest())
                             <li><a href="{{ route('permissions.index') }}">Manage Users & Roles</a></li>
+                            <li style="margin-left: 500px;" ><a href="" id="txt">Check Out The Time</a></li>
                          @endif
+
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">

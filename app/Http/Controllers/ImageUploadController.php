@@ -51,10 +51,11 @@ class ImageUploadController extends Controller
         	$incident = Incidents::whereincidentid($incidentid)->first(); 
         	$incident->image=$getimageName;
         	$incident->save();
+            return redirect('/listofaccidents');
+            // ->with('success','images Has been You uploaded successfully.')
+            // ->with('image',$getimageName);
    
         }
-        return back()
-            ->with('success','images Has been You uploaded successfully.')
-            ->with('image',$getimageName);
+        
     }
 }

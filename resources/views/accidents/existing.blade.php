@@ -1,66 +1,49 @@
-/@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
-<div class="container"><a href="{{ route('accidents.index') }}"><button type="submit" class="btn btn-primary">Back</button></a></div>
+<div class="container"><a href="{{ route('accidents.index') }}"><button type="submit" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-arrow-left">&nbsp;<b>Back</b></span></button></a>
    @foreach($accidents as $accidents)
-                         <div class="row">
-                                  <div class="col-md-10 col-md-offset-2 ">
-                                        <div class="panel panel-default ">
-                                           <div class="panel-body">
-                                             <div class="rounded mx-auto d-block">
-                                              <img class="img-fluid max-width:5% height:auto" alt="image" src="{{URL::asset('images/'.$accidents->image)}}"/>
-                                              </div>
-                                            </div>
-                                          </div>  
-                                  </div>
-                          </div>
-                          <div class="row">
-                                  <div class="col-md-30 col-md-offset-2 ">
-                                        <div class="panel panel-default ">
-                                           <div class="panel-body">
-                                              <div class="col-md-3 ">
-                                              Incident ID: {{$accidents->incidentid}}
-                                              </div>
-                                              <div class="col-md-5">
-                                               Incident Name: {{$accidents->incidentname}}
-                                              </div>
-                                              <div class="col-md-">
-                                               Plane: {{$accidents->aeroplane}}
-                                              </div>
-                                             
-                                            </div>
-                                          </div>  
-                                  </div>
-                          </div>
-                           <div class="row">
-                                  <div class="col-md-30 col-md-offset-2 ">
-                                        <div class="panel panel-default ">
-                                           <div class="panel-body">
-                                               <div class="col-md-5">
-                                               Location: {{$accidents->location}}
-                                              </div>
-                                               <div class="col-md-5">
-                                               Level of Damage: {{$accidents->damagelevel}}
-                                              </div>
-                                             <div class="col-md-5">
-                                               Casualities: {{$accidents->casualties}}
-                                              </div>
-                                             
-                                            </div>
-                                          </div>  
-                                  </div>
-                          </div>
-                           <div class="row">
-                                  <div class="col-md-30 col-md-offset-2 ">
-                                        <div class="panel panel-default ">
-                                           <div class="panel-body">
-                                              <div class="col-md-5">
-                                               More Description: {{$accidents->description}}
-                                              </div>
-                                            </div>
-                                          </div>  
-                                  </div>
-                          </div>
-               @endforeach
 
+     <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Incident Id</th>
+            <th>Incident Name</th>
+            <th>Plane</th>
+            <th>Location</th>
+            <th>Damage Levels</th>
+            <th>Casualties</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img class="img-thumbnail" height="50px;" width = "200"alt="No Image Uplaoded" src="{{URL::asset('images/'.$accidents->image)}}"/></td>
+            <td>{{$accidents->incidentid}}</td>
+            <td>{{$accidents->incidentname}}</td>
+            <td>{{$accidents->aeroplane}}</td>
+            <td>{{$accidents->location}}</td>
+            <td>{{$accidents->damagelevel}}</td>
+            <td>{{$accidents->casualties}}</td>
+            <td>{{$accidents->description}}</td>
+          </tr>
+          
+        </tbody>
+      </table>  
+
+
+
+
+
+
+
+
+
+
+
+
+                         
+               @endforeach
+</div>
 @endsection

@@ -13,6 +13,8 @@ use App\Repaire;
 use App\User;
 use Auth;
 use Session;
+use App\Charts\SampleChart;
+
 
 class ReportsController extends Controller
 {

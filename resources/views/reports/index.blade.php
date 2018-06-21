@@ -5,27 +5,37 @@
 
 <div class="container">
 
-      <div class="row">
-               <div class="col-md-8 col-md-offset-2 ">
-                    <div class="panel panel-default ">
-                        <div class="panel-body">
-                          <div class="row">
+    <div class="row">
+          <div class="col-md-8 col-md-offset-2 ">
+            <div class="panel panel-default ">
+                <div class="panel-body">
+                    <div class="row">
                           <div class="col-md-4">
-                          <div class="well">
-                            <h3>Total AirCrafts <br/> <br/> <center><span style="color: #F89C0F !important;">{{$totalAircrafts}}</span></center></h3> 
-                          </div>
-                          </div>
-                          <div class="col-md-4">
-                          <div class="well">
-                            <h3>Total Incidents <br/> <br/><center><span style="color: #F89C0F !important;">{{$totalIncidents}}</span></center></h3> 
-                          </div>
+                                 <div class="well">
+                                     <h3>Total AirCrafts <br/> <br/> <center><span style="color: #F89C0F !important;">{{$totalAircrafts}}
+                                     </span></center></h3> 
+                                 </div>
                           </div>
                           <div class="col-md-4">
-                          <div class="well">
-                            <h3>Total Repairs <br/> <br/><center><span style="color: #F89C0F !important;">{{$totalRepairs}}</span></center> </h3> 
+                                  <div class="well">
+                                    <h3>Total Incidents <br/> <br/><center><span style="color: #F89C0F !important;">{{$totalIncidents}}</span></center></h3> 
+                                  </div>
                           </div>
+                          <div class="col-md-4">
+                                    <div class="well">
+                                      <h3>Total Repairs <br/> <br/><center><span style="color: #F89C0F !important;">{{$totalRepairs}}</span></center> </h3> 
+                                    </div>
                           </div>
-                          </div>
+                     </div>
+                     <div class="row">
+                            <div class="col-md-6">
+                             
+                            </div>
+                            <div class="col-md-6"></div>
+                       
+                     </div>
+
+
                         <P>Please choose the aeroplane you need reports for</P>
                             <!-- Third Section -->
                      <div class="col-md-16 col-centered ">
